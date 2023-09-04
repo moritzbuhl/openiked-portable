@@ -73,6 +73,9 @@ endif()
 if(NOT HAVE_VIS)
 	list(APPEND SRCS ${IKED_COMPAT}/vis.c)
 endif()
+if(NOT HAVE_IBUF_DATA)
+	list(APPEND SRCS ${IKED_COMPAT}/ibuf_data.c)
+endif()
 
 set(CFLAGS)
 list(APPEND CFLAGS

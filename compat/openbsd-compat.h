@@ -101,6 +101,10 @@ int getdtablecount(void);
 int usleep(unsigned int x);
 #endif
 
+#if !defined(HAVE_IBUF_DATA)
+void * ibuf_data(struct ibuf *);
+#endif
+
 #ifdef HAVE_SOCKADDR_SA_LEN
 #ifndef SA_LEN
 #define SA_LEN(sa)      (sa)->sa_len

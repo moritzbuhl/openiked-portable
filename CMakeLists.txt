@@ -361,6 +361,12 @@ check_function_exists(getopt HAVE_GETOPT)
 if(HAVE_GETOPT)
         add_definitions(-DHAVE_GETOPT)
 endif()
+
+check_function_exists(ibuf_data HAVE_IBUF_DATA)
+if(HAVE_IBUF_DATA)
+        add_definitions(-DHAVE_IBUF_DATA)
+endif()
+
 if(HAVE_VROUTE OR HAVE_VROUTE_NETLINK)
 	add_definitions(-DHAVE_VROUTE)
 endif()
